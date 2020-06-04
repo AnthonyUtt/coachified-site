@@ -1,0 +1,489 @@
+//
+// Font Imports
+//
+
+// Nunito Sans
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+// Poppins Medium
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+
+//
+// Variables
+//
+
+$white: #FFF;
+$darkGray: #333;
+$offWhite: #F1F1F1;
+$lightGray: #CCC;
+$lightBlue: #867eff;
+$midGray: #666;
+$purple: #8217CC;
+
+//
+// Mix-ins
+//
+
+@mixin backgroundGradient {
+    background: $lightBlue;
+    background: linear-gradient(171deg, $lightBlue 26%, $purple 100%);
+}
+
+//
+// Style
+//
+
+// Base Element Styling / Resets
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $darkGray;
+
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: 35px;
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: $darkGray;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+nav {
+    float: right;
+    margin-top: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    ul {
+        display: inline;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            padding: 10px 20px;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    a {
+        display: inline;
+    }
+}
+
+input {
+    padding: 10px 20px;
+    margin: 15px;
+
+    border: none;
+    background-color: $offWhite;
+    
+    &::placeholder {
+        color: $lightGray;
+    }
+}
+
+// Utility Classes
+
+.accent {
+    color: $purple;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.banner {
+    @include backgroundGradient();
+
+    width: 100vw;
+    margin: 0;
+    padding: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.centered-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.container {
+    margin: 0 60px;
+}
+
+.container-wide {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cover {
+    height: 100vh;
+    margin: 0 30px;
+
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.float-box {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    &.float-box-left {
+        align-items: flex-start;
+    }
+}
+
+.header {
+    margin: 0 15px;
+    margin-bottom: 60px;
+}
+
+.spacer {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .split-box {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        width: 100%;
+        box-sizing: border-box;
+        margin: 15px;
+    }
+}
+
+.svg-icon {
+    width: 100px;
+    height: 100px;
+
+    &.icon-white {
+        path, polygon, rect {
+            fill: $white;
+        }
+    
+        circle {
+            stroke: $white;
+            stroke-width: 1;
+        }
+    }
+
+    &.icon-gradient {
+        path, polygon, rect {
+            fill: $purple;
+        }
+
+        circle {
+            stroke: $purple;
+            stroke-width: 1;
+        }
+    }
+}
+
+.white {
+    color: $white;
+}
+
+// Design Classes
+
+.btn {
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    text-transform: uppercase;
+
+    &.btn-white {
+        background-color: $white;
+        color: $purple;
+
+        &:hover {
+            background-color: $purple;
+            color: $white;
+        }
+    }
+
+    &.btn-gradient {
+        @include backgroundGradient();
+        color: $white;
+
+        &:hover {
+            background: $white;
+            color: $purple;
+        }
+    }
+
+    &.btn-shadow {
+        box-shadow: $lightBlue 0 5px 10px;
+    }
+
+    &.btn-outline {
+        border: 1px solid $purple;
+    }
+
+    &.btn-outline-hover:hover {
+        border: 1px solid $purple;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 30px;
+    padding: 30px;
+
+    width: 300px;
+    height: 400px;
+
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    &.card-white {
+        background-color: $white;
+        color: $darkGray;
+    }
+
+    &.card-gradient {
+        @include backgroundGradient();
+        color: $white;
+    }
+
+    &.card-shadow {
+        box-shadow: $lightBlue 0 5px 10px;
+    }
+
+    .card-body {
+        text-align: center;
+    }
+}
+
+.deck {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.email-form {
+    padding: 30px;
+}
+
+.footer {
+    background-image: url('../assets/footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    min-height: 400px;
+    color: $white;
+
+    .container {
+        margin: auto;
+        padding-top: 200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    div {
+        margin: 30px 0;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            a {
+                color: $white;
+
+                &:hover {
+                    color: $lightBlue;
+                }
+            }
+        }
+    }
+
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    h6 {
+        font-size: 16px;
+        
+        margin-bottom: 15px;
+    }
+}
+
+.placeholder {
+    display: block;
+    background-color: $lightGray;
+    border-radius: 20px;
+    min-height: 300px;
+    min-width: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+.swatch {
+    @include backgroundGradient();
+    border-radius: 25%;
+
+    position: absolute;
+    z-index: -1;
+
+    transform: translate(50% 50%);
+}
+
+//
+// Media Queries
+//
+
+/* Extra small devices (phones and small screens, less than 600px) is the default */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .footer {
+        .container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 976px;
+        margin: 0 60px;
+    }
+
+    .split {
+        flex-direction: row;
+
+        .split-box {
+            width: 50%;
+        }
+    }
+
+    .float-box {
+        width: 45%;
+
+        &.float-box-left {
+            float: left;
+        }
+
+        &.float-box-right {
+            float: right;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .header {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+}
