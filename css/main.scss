@@ -1,3 +1,5 @@
+@import 'mdl/material-design-lite.scss';
+
 //
 // Font Imports
 //
@@ -124,6 +126,17 @@ input {
     }
 }
 
+// MDL Classes
+
+.mdl-layout__header {
+    color: $darkGray;
+}
+
+header > .mdl-layout__drawer-button {
+    color: $darkGray !important;
+}
+
+
 // Utility Classes
 
 .accent {
@@ -171,7 +184,8 @@ input {
 }
 
 .container {
-    margin: 0 60px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .container-wide {
@@ -197,7 +211,7 @@ input {
 .float-box {
     width: 100%;
     box-sizing: border-box;
-    margin: 15px;
+    padding: 0 30px;
 
     display: flex;
     flex-direction: column;
@@ -273,6 +287,14 @@ input {
 }
 
 // Design Classes
+
+.top-swatch {
+    height: 400px;
+    width: 400px;
+
+    top: 0;
+    right: 0;
+}
 
 .btn {
     padding: 10px 20px;
@@ -436,6 +458,11 @@ input {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .top-swatch {
+        height: 500px;
+        width: 500px;
+    }
+
     .footer {
         .container {
             flex-direction: row;
@@ -446,6 +473,11 @@ input {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .top-swatch {
+        height: 600px;
+        width: 600px;
+    }
+
     .container {
         max-width: 976px;
         margin: 0 60px;
@@ -474,6 +506,11 @@ input {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .top-swatch {
+        height: 700px;
+        width: 700px;
+    }
+
     .container {
         margin: 0 auto;
     }
@@ -481,9 +518,51 @@ input {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .top-swatch {
+        height: 750px;
+        width: 750px;
+    }
+
     .header {
         max-width: 1200px;
         margin: 0 auto;
         margin-bottom: 60px;
+    }
+}
+
+//
+// Animations
+//
+
+[data-aos="shrink"] {
+    transform: rotate(-45deg) translate(50%, 0%);
+    transition-property: transform;
+
+    &.aos-animate {
+        transform: rotate(-88deg) translate(355px, 100px);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    [data-aos="shrink"].aos-animate {
+        transform: rotate(-88deg) translate(455px, 125px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    [data-aos="shrink"].aos-animate {
+        transform: rotate(-88deg) translate(555px, 125px);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    [data-aos="shrink"].aos-animate {
+        transform: rotate(-88deg) translate(650px, 125px);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    [data-aos="shrink"].aos-animate {
+        transform: rotate(-88deg) translate(700px, 150px);
     }
 }
