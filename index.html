@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="swatch top-swatch" data-aos="shrink" data-aos-anchor="#trigger-shrink" data-aos-anchor-placement="center-top"></div>
+    <div class="swatch top-swatch" data-aos="shrink" data-aos-anchor="#trigger-shrink" data-aos-anchor-placement="top-top"></div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--transparent">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout__title"><strong>coach</strong>ified.</span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-navigation__link" href="#">Home</a>
-                    <a class="mdl-navigation__link" href="#">Services</a>
-                    <a class="mdl-navigation__link" href="#">Prices</a>
+                    <a class="mdl-navigation__link" href="#home">Home</a>
+                    <a class="mdl-navigation__link" href="#services">Services</a>
+                    <a class="mdl-navigation__link" href="#prices">Prices</a>
                     <a class="mdl-navigation__link" href="#">Sign In</a>
                 </nav>
             </div>
@@ -36,14 +36,14 @@
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <span class="mdl-layout__title"><strong>coach</strong>ified.</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="#">Home</a>
-                <a class="mdl-navigation__link" href="#">Services</a>
-                <a class="mdl-navigation__link" href="#">Prices</a>
+                <a class="mdl-navigation__link" href="#home">Home</a>
+                <a class="mdl-navigation__link" href="#services">Services</a>
+                <a class="mdl-navigation__link" href="#prices">Prices</a>
                 <a class="mdl-navigation__link" href="#">Sign In</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="container">
+            <div id="home" class="container">
                 <div>
                     <div class="float-box float-box-right">
                         <div id="trigger-shrink" class="placeholder"></div>
@@ -51,7 +51,7 @@
                     <div class="float-box float-box-left">
                         <h2 class="d-block align-left">Cool<br>Tagline Goes Here</h2>
                         <p style="margin-bottom: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus esse nesciunt inventore dolorem similique perspiciatis doloremque pariatur at non corrupti?</p>
-                        <a class="btn btn-gradient btn-shadow" href="#">Book A Free Session</a>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">Book A Free Session</button>
                     </div>
                     <div class="clear-fix"></div>
                 </div>
@@ -66,106 +66,82 @@
                     <p style="margin-bottom: 15px;">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos odio molestiae quo provident similique recusandae quos tenetur accusamus optio omnis iusto, placeat velit eos temporibus molestias modi quisquam hic ullam praesentium quae magni. Officiis cupiditate distinctio esse voluptatum repellat ducimus quo molestias, quasi repudiandae magnam nihil maiores expedita mollitia rerum!
                     </p>
-                    <a class="btn btn-gradient btn-shadow" href="#">Learn More</a>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">Learn More</button>
                 </div>
             </div>
-            <div class="container">
+            <div id="services" class="container">
                 <h3>What We Offer</h3>
             </div>
             <div class="container-wide deck">
                 <div class="card card-gradient card-shadow">
-                    <div class="card-icon">
-                        <svg class="svg-icon icon-white" viewBox="0 0 20 20">
-                            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
-                        </svg>
-                    </div>
+                    <i class="material-icons card-icon">question_answer</i>
                     <div class="card-body">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolor molestiae inventore quibusdam at, non mollitia hic doloribus esse.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-white" href="#">See More</a>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white">See More</button>
                     </div>
                 </div>
                 <div class="card card-gradient card-shadow">
-                    <div class="card-icon">
-                        <svg class="svg-icon icon-white" viewBox="0 0 20 20">
-                            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
-                        </svg>
-                    </div>
+                    <i class="material-icons card-icon">record_voice_over</i>
                     <div class="card-body">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolor molestiae inventore quibusdam at, non mollitia hic doloribus esse.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-white" href="#">See More</a>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white">See More</button>
                     </div>
                 </div>
                 <div class="card card-gradient card-shadow">
-                    <div class="card-icon">
-                        <svg class="svg-icon icon-white" viewBox="0 0 20 20">
-                            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
-                        </svg>
-                    </div>
+                    <i class="material-icons card-icon">videocam</i>
                     <div class="card-body">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolor molestiae inventore quibusdam at, non mollitia hic doloribus esse.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-white" href="#">See More</a>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white">See More</button>
                     </div>
                 </div>
                 <div class="card card-gradient card-shadow">
-                    <div class="card-icon">
-                        <svg class="svg-icon icon-white" viewBox="0 0 20 20">
-                            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
-                        </svg>
-                    </div>
+                    <i class="material-icons card-icon">qr_code_scanner</i>
                     <div class="card-body">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolor molestiae inventore quibusdam at, non mollitia hic doloribus esse.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-white" href="#">See More</a>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white">See More</button>
                     </div>
                 </div>
                 <div class="card card-gradient card-shadow">
-                    <div class="card-icon">
-                        <svg class="svg-icon icon-white" viewBox="0 0 20 20">
-                            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
-                        </svg>
-                    </div>
+                    <i class="material-icons card-icon">cloud_upload</i>
                     <div class="card-body">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolor molestiae inventore quibusdam at, non mollitia hic doloribus esse.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-white" href="#">See More</a>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white">See More</button>
                     </div>
                 </div>
                 <div class="card card-gradient card-shadow">
-                    <div class="card-icon">
-                        <svg class="svg-icon icon-white" viewBox="0 0 20 20">
-                            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
-                        </svg>
-                    </div>
+                    <i class="material-icons card-icon">cast_for_education</i>
                     <div class="card-body">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolor molestiae inventore quibusdam at, non mollitia hic doloribus esse.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-white" href="#">See More</a>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white">See More</button>
                     </div>
                 </div>
             </div>
             <div style="height: 25vh;"></div>
-            <div class="banner">
+            <div id="prices" class="banner">
                 <h3 class="white">Our Pricing</h3>
                 <div class="deck">
                     <div class="card card-white">
@@ -177,7 +153,7 @@
                         </div>
                         <h5 class="accent">$140</h5>
                         <div class="card-footer">
-                            <a class="btn btn-white btn-outline" href="#">See Details</a>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white mdl-button--outline">See More</button>
                         </div>
                     </div>
                     <div class="card card-white">
@@ -189,7 +165,7 @@
                         </div>
                         <h5 class="accent">$140</h5>
                         <div class="card-footer">
-                            <a class="btn btn-gradient btn-outline-hover" href="#">See Details</a>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">See More</button>
                         </div>
                     </div>
                     <div class="card card-white">
@@ -201,7 +177,7 @@
                         </div>
                         <h5 class="accent">$140</h5>
                         <div class="card-footer">
-                            <a class="btn btn-white btn-outline" href="#">See Details</a>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--white mdl-button--outline">See More</button>
                         </div>
                     </div>
                 </div>
@@ -212,7 +188,7 @@
                 <div class="email-form">
                     <form>
                         <input type="email" placeholder="Drop Your Email">
-                        <button class="btn btn-gradient btn-shadow">Subscribe</button>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -221,24 +197,22 @@
                 <div class="container">
                     <div>
                         <h4><strong>coach</strong>ified.</h4>
-                        <p>Stay In Touch</p>
+                        <!-- TODO: Social Media Icon Links -->
+                        <!--<p>Stay In Touch</p>-->
                     </div>
                     <div>
                         <h6>Quick Links</h6>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Location</a></li>
-                            <li><a href="#">Office</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#prices">Prices</a></li>
+                            <li><a href="#">Sign In</a></li>
                         </ul>
                     </div>
                     <div>
                         <h6>Contact</h6>
                         <ul>
-                            <li>000-000-0000</li>
-                            <li>info@email.com</li>
-                            <li>New York, US</li>
+                            <li><a href="mailto:info@getcoachified.com">info@getcoachified.com</a></li>
                         </ul>
                     </div>
                 </div>

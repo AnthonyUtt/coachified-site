@@ -366,6 +366,10 @@ header > .mdl-layout__drawer-button {
         box-shadow: $lightBlue 0 5px 10px;
     }
 
+    .card-icon {
+        font-size: 100px;
+    }
+
     .card-body {
         text-align: center;
     }
@@ -409,6 +413,12 @@ header > .mdl-layout__drawer-button {
         list-style-type: none;
 
         li {
+            p {
+                display: inline-block;
+                margin: 0;
+                font-size: 12px;
+            }
+
             a {
                 color: $white;
 

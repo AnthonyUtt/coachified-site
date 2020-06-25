@@ -4560,7 +4560,7 @@ ul, ol {
 .mdl-button {
   background: transparent;
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
   color: rgb(0,0,0);
   position: relative;
   height: 36px;
@@ -4586,6 +4586,19 @@ ul, ol {
   text-align: center;
   line-height: 36px;
   vertical-align: middle;
+}
+
+.mdl-button--white {
+  background-color: rgb(255,255,255);
+  color: rgb($color-primary);
+}
+
+.mdl-button--white:hover {
+  color: rgb(255,255,255);
+}
+
+.mdl-button--outline {
+  border: 1px solid rgb($color-primary);
 }
 
 .mdl-button::-moz-focus-inner {

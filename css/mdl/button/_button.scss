@@ -42,6 +42,19 @@
   line-height: $button-height;
   vertical-align: middle;
 
+  &--white {
+    background-color: unquote("rgb(#{$color-white})");
+    color: $button-primary-color-alt;
+
+    &:hover {
+      color: unquote("rgb(#{$color-white})");
+    }
+  }
+
+  &--outline {
+    border: 1px solid $button-primary-color-alt;
+  }
+
   &::-moz-focus-inner {
     border: 0;
   }
