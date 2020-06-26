@@ -1,0 +1,34 @@
+language: generic
+branches:
+  only:
+    - master
+addons:
+  ssh_known_hosts: nl1-ts1.a2hosting.com:7822
+script:
+  - "css/compile.rb"
+before_install:
+  - gem install sass
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_2fe83ec3851a_key -iv $encrypted_2fe83ec3851a_iv
+    -in landing-page_rsa.enc -out /tmp/landing-page_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/landing-page_rsa
+  - ssh-add /tmp/landing-page_rsa
+  - mkdir -p $TRAVIS_BUILD_DIR/public/assets
+  - mkdir $TRAVIS_BUILD_DIR/public/css
+  - cp $TRAVIS_BUILD_DIR/*.html $TRAVIS_BUILD_DIR/public/
+  - cp $TRAVIS_BUILD_DIR/css/*.css $TRAVIS_BUILD_DIR/*.map.css $TRAVIS_BUILD_DIR/public/css/
+  - cp $TRAVIS_BUILD_DIR/assets/* $TRAVIS_BUILD_DIR/public/assets/
+  - cp $TRAVIS_BUILD_DIR/favicon.ico $TRAVIS_BUILD_DIR/public/
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r -e "ssh -p 7822" --delete-after --quiet $TRAVIS_BUILD_DIR/public/* getcoac1@nl1-ts1.a2hosting.com:/home/getcoac1/public_html
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
