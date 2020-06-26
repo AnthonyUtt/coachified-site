@@ -17,7 +17,7 @@ before_deploy:
   - mkdir -p $TRAVIS_BUILD_DIR/public/assets
   - mkdir $TRAVIS_BUILD_DIR/public/css
   - cp $TRAVIS_BUILD_DIR/*.html $TRAVIS_BUILD_DIR/public/
-  - cp $TRAVIS_BUILD_DIR/css/*.css $TRAVIS_BUILD_DIR/*.map.css $TRAVIS_BUILD_DIR/public/css/
+  - cp $TRAVIS_BUILD_DIR/css/*.css $TRAVIS_BUILD_DIR/css/*.map.css $TRAVIS_BUILD_DIR/public/css/
   - cp $TRAVIS_BUILD_DIR/assets/* $TRAVIS_BUILD_DIR/public/assets/
   - cp $TRAVIS_BUILD_DIR/favicon.ico $TRAVIS_BUILD_DIR/public/
 deploy:
